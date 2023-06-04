@@ -1,1 +1,15 @@
-<p>pds-cqs works!</p>
+<div>Incompleted Items: {{ usecase.state.incompletedTodos().length }}</div>
+
+<div>
+  <form>
+    <input [formControl]="newTodoInput" />
+    <button type="button" (click)="addTodo()" [disabled]="newTodoInput.invalid">
+      Add Todo item
+    </button>
+  </form>
+</div>
+
+<app-todo-list-view
+  [todos]="usecase.state.todos()"
+  (changeCompleted)="usecase.setTodoCompleted($event.id, $event.completed)"
+/>
