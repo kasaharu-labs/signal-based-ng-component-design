@@ -1,1 +1,15 @@
-<p>todo-list-view works!</p>
+<ul>
+  <li *ngFor="let todo of todos">
+    <label>
+      <input
+        #checkbox
+        type="checkbox"
+        [checked]="todo.completed"
+        (change)="
+          changeCompleted.emit({ id: todo.id, completed: checkbox.checked })
+        "
+      />
+      {{ todo.title }}
+    </label>
+  </li>
+</ul>
