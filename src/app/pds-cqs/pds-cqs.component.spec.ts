@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PdsCqsComponent } from './pds-cqs.component';
+import PdsCqsComponent from './pds-cqs.component';
 
 describe('PdsCqsComponent', () => {
   let component: PdsCqsComponent;
@@ -8,7 +8,7 @@ describe('PdsCqsComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [PdsCqsComponent]
+      imports: [PdsCqsComponent],
     });
     fixture = TestBed.createComponent(PdsCqsComponent);
     component = fixture.componentInstance;
